@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 @import 'settings';
-@import 'custom';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -54,3 +53,108 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Custom CSS
+.home-hero{
+  position: relative;
+  height: auto;
+  min-height: 320px;
+  max-height: 600px;
+  width:auto;
+  min-width: 100%;
+  overflow: hidden;
+  margin:0;
+  padding:0;
+  border-bottom: 5px solid #FFFFFF;
+}
+.home-hero img{
+  display: inline-block;
+  height: auto;
+  min-height: 320px;
+  max-height: 600px;
+  width: 100%;
+}
+.home-hero iframe, .home-hero video{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+.home-hero .slider{
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.home-hero .messager {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin:0;
+  padding: 0;
+  width: 25%;
+  text-align: center;
+}
+
+.home-nav{
+  position: relative;
+  width: 50%;
+  height: auto;
+  min-height: 1px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.home-nav .slick-slide img{
+  display: block;
+}
+
+.messager h1 {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.messager p {
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+  border: 0;
+  background: none;
+  z-index: 1;
+  outline: none;
+}
+
+.slick-prev {
+  left: 1%;
+}
+
+.slick-prev:after {
+  content: "\f104";
+  font: 40px/1 'FontAwesome';
+}
+
+.slick-next {
+  right: 1%;
+  text-align: right;
+}
+
+.slick-next:after {
+  content: "\f105";
+  font: 40px/1 'FontAwesome';
+}
+
+.slick-prev:hover:after,
+.slick-next:hover:after {
+  color: #7e7e7e;
+}
+
+.slick-slide {}
+
+// Slick SLider CSS
+@import 'slick';

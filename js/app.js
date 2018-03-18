@@ -1,12 +1,12 @@
 $(document).foundation();
 
-$(document).ready(function() {
+$(function(){
 
   $('.home-hero').slick({
     slidesToShow: 1,
-    adaptiveHeight: true,
     fade: true,
     centerMode: true,
+    //adaptiveHeight: true,
     asNavFor: '.home-nav'
   });
 
@@ -14,31 +14,15 @@ $(document).ready(function() {
     asNavFor: '.home-hero',
     infinite: true,
     arrows: false,
+    slidesToShow: 6,
     slidesToScroll: 1,
-    variableWidth: true,
-    focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 760,
-        settings: {
-          centerMode: true,
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: true,
-          slidesToShow: 1,
-        }
-      }
-    ]
+    focusOnSelect: true
   });
 
   $('video').each(function () {
       this.play();
   });
 
-  $("body").fitVids();
+  $('body').fitVids();
 
 });
