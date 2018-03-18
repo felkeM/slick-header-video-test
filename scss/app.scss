@@ -151,15 +151,24 @@
 }
 
 .home-nav{
-  img{
-    display: block;
-  }
   .slick-current{
     border-bottom-color: #920710 !important;
   }
   .slick-slide{
+    display: block;
+    float: left;
+    height: 100%;
+    min-height: 1px;
     border-bottom-style: solid;
     border-bottom-width: 10px;
+
+    img{
+      display: block;
+      width: auto;
+      min-width: 100%;
+      height: auto;
+      min-height: 100%;
+    }
     &:nth-child(even){
       border-bottom-color: #eeeeee;
     }

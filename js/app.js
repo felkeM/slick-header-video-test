@@ -6,17 +6,19 @@ $(function(){
     slidesToShow: 1,
     fade: true,
     centerMode: true,
-    //adaptiveHeight: true,
-    asNavFor: '.home-nav'
+    asNavFor: '.home-nav',
+    adaptiveHeight: true
   });
 
   $('.home-nav').slick({
     asNavFor: '.home-hero',
     infinite: true,
     arrows: false,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
-    focusOnSelect: true
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: '60px'
   });
 
   $('video').each(function () {
