@@ -4,6 +4,8 @@
 @import 'foundation';
 @import 'motion-ui';
 
+$thumbnail-width-large: 150px;
+
 @include foundation-global-styles;
 //@include foundation-grid;
 // @include foundation-flex-grid;
@@ -147,12 +149,23 @@
     border-bottom-color: #920710 !important;
   }
   .slick-track{
-	   display: block;
+      width: auto;
+      @include breakpoint(large up) {
+       min-height: $thumbnail-width-large;
+      }
+      @include breakpoint(small up) {
+       min-height: 100%;
+      }
+      @include breakpoint(small only) {
+        display: none;
+      }
      .slick-slide{
+       display: block;
+       height: $thumbnail-width-large;
        img{
-         display: block;
-         height: auto;
-         min-height: 250px;
+         width: 100%;
+         height: 100%;
+
        }
         border-bottom-style: solid;
         border-bottom-width: 10px;

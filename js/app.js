@@ -18,7 +18,23 @@ $(function(){
     slidesToScroll: 1,
     focusOnSelect: true,
     centerMode: true,
-    centerPadding: '60px'
+    centerPadding: '60px',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $('video').each(function () {
