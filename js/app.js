@@ -1,37 +1,35 @@
 $(document).foundation();
 
-$(function(){
+$(document).ready(function() {
 
   $('.home-hero').slick({
     slidesToShow: 1,
+    adaptiveHeight: true,
     fade: true,
     centerMode: true,
-    asNavFor: '.home-nav',
-    adaptiveHeight: true
+    asNavFor: '.home-nav'
   });
 
   $('.home-nav').slick({
     asNavFor: '.home-hero',
     infinite: true,
     arrows: false,
-    slidesToShow: 5,
     slidesToScroll: 1,
+    variableWidth: true,
     focusOnSelect: true,
-    centerMode: true,
-    centerPadding: '60px',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 760,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1
+          centerMode: true,
+          slidesToShow: 3,
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 480,
         settings: {
+          centerMode: true,
           slidesToShow: 1,
-          slidesToScroll: 1
         }
       }
     ]
@@ -41,6 +39,6 @@ $(function(){
       this.play();
   });
 
-  $('body').fitVids();
+  $("body").fitVids();
 
 });

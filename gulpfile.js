@@ -4,8 +4,7 @@ var $    = require('gulp-load-plugins')();
 var sassPaths = [
   'bower_components/normalize.scss/sass',
   'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src',
-  'js/vendor/slick/slick'
+  'bower_components/motion-ui/src'
 ];
 
 gulp.task('sass', function() {
