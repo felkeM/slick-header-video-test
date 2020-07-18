@@ -32,7 +32,7 @@
     "datetimepicker": "^0.1.38",
     "jquery": "^2.1.4",
     "jquery-ui": "^1.11.2",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.19",
     "gulp-autoprefixer": "^3.1.0"
   }
 }
